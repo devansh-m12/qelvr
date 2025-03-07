@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Qelvr
+
+Connect, Collaborate, Create. Find like-minded developers for meaningful projects.
+
+## About
+
+Qelvr (pronounced as "Kelver") is a platform designed to bring developers together to build innovative open-source projects. No more generic social media clones – we're here to create something meaningful that you'll be proud to put on your resume.
+
+### 🎯 Mission
+
+To foster a community where developers can:
+- Find collaborators who share their interests and vision
+- Work on unique, portfolio-worthy projects
+- Learn and grow through meaningful open-source contributions
+- Build their professional network organically
+
+### 🌟 Key Features (Coming Soon)
+
+- Project matchmaking based on interests and skills
+- Real-time collaboration tools
+- Project idea validation and refinement
+- Portfolio showcase opportunities
+- Skill-based team formation
 
 ## Getting Started
 
 First, run the development server:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Next.js
+- More details coming soon...
 
-## Learn More
+## Contributing
 
-To learn more about Next.js, take a look at the following resources:
+We're still in early development. Stay tuned for contribution guidelines!
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Vision
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Qelvr aims to solve a common problem in the developer community – finding meaningful projects and like-minded collaborators. We believe that great ideas deserve great teams, and every developer deserves the chance to work on projects they're passionate about.
 
-## Deploy on Vercel
+## Stay Connected
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+More information coming soon about how to get involved and stay updated on our progress.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+Built with ❤️ for developers, by developers.

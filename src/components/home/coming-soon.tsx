@@ -7,12 +7,12 @@ export default function ComingSoon() {
   return (
     <>
       <Header />
-      <div className="py-40 dark:bg-black bg-white w-full">
+      <div className="py-20 dark:bg-black bg-white w-full">
         <div className="max-w-7xl mx-auto text-center">
           <p className="font-bold text-xl md:text-4xl dark:text-white text-black">
-            Remote{" "}
+            Coming{" "}
             <span className="text-neutral-400">
-              {"Connectivity".split("").map((word, idx) => (
+              {"Soon !!!".split("").map((word, idx) => (
                 <motion.span
                   key={idx}
                   className="inline-block"
@@ -26,9 +26,8 @@ export default function ComingSoon() {
             </span>
           </p>
           <p className="text-sm md:text-lg text-neutral-500 max-w-2xl mx-auto py-4">
-            Break free from traditional boundaries. Work from anywhere, at the
-            comfort of your own studio apartment. Perfect for Nomads and
-            Travellers.
+            Thinkg of building a new project for CV? we got you covered.
+            build collobrate with open source community.
           </p>
         </div>
         <WorldMap

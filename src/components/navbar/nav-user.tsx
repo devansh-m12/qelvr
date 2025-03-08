@@ -27,7 +27,7 @@ import {
 } from "@/components/ui/sidebar"
 import { useUser } from "@stackframe/stack"
 import { runAsynchronouslyWithAlert } from "@stackframe/stack-shared/dist/utils/promises"
-import { UserAvatar } from "./user-avatar"
+import { UserAvatar } from "@/components/navbar/user-avatar"
 import { useTheme } from "next-themes"
 import { useRouter } from "next/navigation"
 import { Moon, Sun } from "lucide-react"

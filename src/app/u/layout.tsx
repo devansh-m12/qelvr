@@ -1,13 +1,23 @@
 'use client'
 
-import { UserButton } from "@stackframe/stack";
+import { AppSidebar } from "@/components/navbar/app-sidebar"
+import {
+  SidebarInset,
+  SidebarProvider,
+} from "@/components/ui/sidebar"
+import BreadcrumbHeader from "@/components/navbar/breadcrumbs"
 import { useUser } from "@stackframe/stack";
 
+
 export default function Layout({ children }: { children: React.ReactNode }) {
-    const user = useUser({ or: 'redirect' });
+  const user = useUser({ or: 'redirect' });
   return <>
-  <div>
-      {children}
-  </div>
+   <SidebarProvider>
+      <AppSidebar />
+      <SidebarInset>
+        <BreadcrumbHeader />
+        {children}
+      </SidebarInset>
+    </SidebarProvider>
   </>
 }

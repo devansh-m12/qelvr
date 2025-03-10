@@ -3,6 +3,7 @@ import { Github, Star } from "lucide-react";
 import { Button } from "./button";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+
 function GitHubStarsBadge() {
   const [stars, setStars] = useState<number | null>(0);
   const [isLoading, setIsLoading] = useState(true);
@@ -33,15 +34,33 @@ function GitHubStarsBadge() {
 }
 
 export function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="fixed top-0 w-full border-b border-neutral-200 dark:border-neutral-800 bg-white/80 dark:bg-black/80 backdrop-blur-sm z-50">
+    <header className={`fixed top-0 w-full border-b border-neutral-200 dark:border-neutral-800 bg-white/80 dark:bg-black/80 backdrop-blur-sm z-50 transition-all duration-200 ${
+      isScrolled ? 'shadow-sm' : ''
+    }`}>
       <div className="flex h-16 items-center justify-between px-4 max-w-7xl mx-auto">
         <div className="flex items-center gap-8">
-          <Link href="/" className="font-bold text-xl">
-            <Image src="/icon.svg" alt="Qelvr" width={160} height={160} />
+          <Link 
+            href="/" 
+            className="font-bold text-xl transition-transform hover:scale-105 duration-200"
+          >
+            <Image src="/icon.svg" alt="Qelvr" width={160} height={160} priority />
           </Link>
           <nav className="hidden md:flex gap-6">
-            <Link href="#features" className="text-neutral-500 hover:text-black dark:hover:text-white transition-colors">
+            <Link 
+              href="#features" 
+              className="text-neutral-500 hover:text-black dark:hover:text-white transition-colors relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-current after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
+            >
               Features
             </Link>
           </nav>
@@ -60,9 +79,14 @@ export function Header() {
               <GitHubStarsBadge />
             </a>
           </div>
-          <Button asChild>
-            <Link href="/signin">Sign In</Link>
-          </Button>
+          <div className="flex items-center gap-2">
+            <Button className="hidden sm:inline-flex border border-neutral-200 dark:border-neutral-800" asChild>
+              <Link href="/signin">Sign In</Link>
+            </Button>
+            <Button asChild>
+              <Link href="/signup">Get Started</Link>
+            </Button>
+          </div>
         </div>
       </div>
     </header>

@@ -3,10 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "flask-dev": "python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt && FLASK_DEBUG=1 python3 -m flask --app api/index run -p 5328",
+    "next-dev": "next dev",
+    "dev": "concurrently \"pnpm run next-dev\" \"pnpm run flask-dev\"",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prisma-migrate": "prisma migrate dev"
   },
   "dependencies": {
     "@prisma/client": "^6.4.1",
@@ -21,6 +24,7 @@
     "@stackframe/stack": "^2.7.23",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "autoprefixer": "10.4.14",
     "dotted-map": "^2.2.3",
     "lucide-react": "^0.477.0",
     "motion": "^12.4.10",
@@ -40,9 +44,11 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.2.1",
+    "concurrently": "^8.0.1",
     "prisma": "^6.4.1",
     "tailwindcss": "^4",
     "tsx": "^4.19.3",
     "typescript": "^5.8.2"
-  }
+  },
+  "packageManager": "pnpm@9.15.4+sha512.b2dc20e2fc72b3e18848459b37359a32064663e5627a51e4c74b2c29dd8e8e0491483c3abb40789cfd578bf362fb6ba8261b05f0387d76792ed6e23ea3b1b6a0"
 }
